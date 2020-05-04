@@ -2,7 +2,6 @@
 #define GRAPH_INTERFACE_H_
 #include <iostream>
 
-
 template <typename T>
 class GraphInterface{
     public:
