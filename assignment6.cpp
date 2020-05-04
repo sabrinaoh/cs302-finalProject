@@ -22,5 +22,12 @@ int main(){
     cout << "0: Reno" << endl << "1: San Francisco" << endl << "2: Salt Lake City" << endl << "3: Seattle" << endl << "4: Las Vegas" << endl << endl;
     // Outputs the adjacencies of vertices
     travel.printGraph(5);
+    // Code for finding shortest path or BFS or DFS
+    // Must initialize shortest path to a local variable
+    // Use to calculate cost of trip
+    float costOfGas;
+    cout << "What is the cost of gas? ";
+    cin >> costOfGas;
+    // Cost of Trip = costOfGas * shortest Path
     return 0;
 }
