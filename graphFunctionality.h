@@ -1,11 +1,13 @@
 #ifndef GRAPHFUNCTIONALITY_H
 #define GRAPHFUNCTIONALITY_H
-#include "graph.h"
+
 
 #include <iostream>
 #include <vector>
 #include <list>
+#include "graph.h"
 using namespace std;
+
 template<class T>
 class Graph;
 template <typename T>
@@ -17,11 +19,12 @@ GraphInterface(T newVertex);
     int getNumEdges();
     void add (T vertex, int city, int distance);
     void remove (T vertex, T position);
-    int getEdgeWeight(T start, T end);
+    void getCityConnection(int Start, int last);
     ~GraphInterface() {}
     void DepthRecur(int vertex, bool visit[]);
     void Depth(int rootvertex);
     void bread(int rootvertex);
+    T* list2matrix();
     //friend class Graph<T>;
 };
 
@@ -45,8 +48,18 @@ void GraphInterface<T>::remove(T vertex,T position){
 cityList[vertex].erase(position);
 }
 template<class T>
-int GraphInterface::getEdgeWeight(T vertex, T position){
-//Can't do anything here :/
+void GraphInterface<T>::getCityConnection(int start, int last){
+    int pos = 0;
+    //for some reason find doesn't work
+//vector<int>::iterator i = find(cityList[start].begin(),cityList[start].end(),last);
+for (vector<int> ::iterator i = cityList[start].begin(); i != cityList[start].end(); ++i)
+if(cityList[start].at(pos) == last){
+cout << "City " << start << " is connected to City " << last << " with distance ";
+cout <<Graph<T>::getEdgeWeight(start,pos) << '/n';
+}
+else{
+    cout << "Not found";
+}
 }
 template<class T>
 void GraphInterface<T>::DepthRecur(int vertex, bool visit[])
@@ -98,6 +111,12 @@ void GraphInterface<T>::bread(int rootVertex){
     //pop current vertex
     queue.pop_front();
     }
+}
+template <class T>
+T* GraphInterface<T>::list2matrix(){
+    //Code I was working on but not enough time to debug
+ //T* matrix[Graph<T>::getVertices()][Graph<T>::getVertices()];
+    //return matrix;
 }
 
 #endif // GRAPHFUNCTIONALITY_H
