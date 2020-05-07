@@ -25,7 +25,6 @@ GraphInterface(T newVertex);
     void Depth(int rootvertex);
     void bread(int rootvertex);
     T* list2matrix();
-    //friend class Graph<T>;
 };
 
 
@@ -50,15 +49,11 @@ cityList[vertex].erase(position);
 template<class T>
 void GraphInterface<T>::getCityConnection(int start, int last){
     int pos = 0;
-    //for some reason find doesn't work
-//vector<int>::iterator i = find(cityList[start].begin(),cityList[start].end(),last);
+
 for (vector<int> ::iterator i = cityList[start].begin(); i != cityList[start].end(); ++i)
 if(cityList[start].at(pos) == last){
 cout << "City " << start << " is connected to City " << last << " with distance ";
-cout <<Graph<T>::getEdgeWeight(start,pos) << '/n';
-}
-else{
-    cout << "Not found";
+ Graph<T>::getEdgeWeight(start,pos++); //<< '/n';
 }
 }
 template<class T>
@@ -72,7 +67,7 @@ void GraphInterface<T>::DepthRecur(int vertex, bool visit[])
     for (vector<int>::iterator i = cityList[vertex].begin(); i != cityList[vertex].end(); i++){
             //If haven't visited yet
         if (!visit[*i])
-        //Recurssion
+        //Recurssion - Does function again but with i as new vertex
             DepthRecur(*i, visit);
     }
 
