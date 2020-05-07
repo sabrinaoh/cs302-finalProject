@@ -1,13 +1,11 @@
 #ifndef GRAPHFUNCTIONALITY_H
 #define GRAPHFUNCTIONALITY_H
-
+#include "Graph.h"
 
 #include <iostream>
 #include <vector>
 #include <list>
-#include "graph.h"
 using namespace std;
-
 template<class T>
 class Graph;
 template <typename T>
@@ -19,12 +17,12 @@ GraphInterface(T newVertex);
     int getNumEdges();
     void add (T vertex, int city, int distance);
     void remove (T vertex, T position);
-    void getCityConnection(int Start, int last);
+    int getEdgeWeight(T start, T end);
     ~GraphInterface() {}
     void DepthRecur(int vertex, bool visit[]);
     void Depth(int rootvertex);
     void bread(int rootvertex);
-    T* list2matrix();
+    //friend class Graph<T>;
 };
 
 
@@ -47,14 +45,8 @@ void GraphInterface<T>::remove(T vertex,T position){
 cityList[vertex].erase(position);
 }
 template<class T>
-void GraphInterface<T>::getCityConnection(int start, int last){
-    int pos = 0;
-
-for (vector<int> ::iterator i = cityList[start].begin(); i != cityList[start].end(); ++i)
-if(cityList[start].at(pos) == last){
-cout << "City " << start << " is connected to City " << last << " with distance ";
- Graph<T>::getEdgeWeight(start,pos++); //<< '/n';
-}
+int GraphInterface<T>::getEdgeWeight(T vertex, T position){
+//Can't do anything here :/
 }
 template<class T>
 void GraphInterface<T>::DepthRecur(int vertex, bool visit[])
@@ -67,7 +59,7 @@ void GraphInterface<T>::DepthRecur(int vertex, bool visit[])
     for (vector<int>::iterator i = cityList[vertex].begin(); i != cityList[vertex].end(); i++){
             //If haven't visited yet
         if (!visit[*i])
-        //Recurssion - Does function again but with i as new vertex
+        //Recurssion
             DepthRecur(*i, visit);
     }
 
@@ -106,12 +98,6 @@ void GraphInterface<T>::bread(int rootVertex){
     //pop current vertex
     queue.pop_front();
     }
-}
-template <class T>
-T* GraphInterface<T>::list2matrix(){
-    //Code I was working on but not enough time to debug
- //T* matrix[Graph<T>::getVertices()][Graph<T>::getVertices()];
-    //return matrix;
 }
 
 #endif // GRAPHFUNCTIONALITY_H
