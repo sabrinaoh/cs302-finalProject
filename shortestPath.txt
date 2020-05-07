@@ -1,0 +1,26 @@
+
+Reno -> San Francisco -> Salt Lake City -> Seattle -> Las Vegas -> Reno 3084
+Reno -> San Francisco -> Las Vegas -> Seattle -> Salt Lake City -> Reno 2927
+Reno -> San Francisco -> Las Vegas -> Salt Lake City -> Seattle -> Reno 2751
+Reno -> San Francisco -> Seattle -> Salt Lake City -> Las Vegas -> Reno 2734*
+Reno -> San Francisco -> Seattle -> Las Vegas -> Salt Lake City -> Reno 3116
+Reno -> Salt Lake City -> San Francisco -> Las Vegas -> Seattle -> Reno 3401
+Reno -> Salt Lake City -> San Francisco -> Seattle -> Las Vegas -> Reno 3652
+Reno -> Salt Lake City -> Las Vegas -> San Francisco -> Seattle -> Reno 3019
+Reno -> Salt Lake City -> Las Vegas -> Seattle -> San Francisco -> Reno 3116
+Reno -> Salt Lake City -> Seattle -> San Francisco -> Las Vegas -> Reno 3173
+Reno -> Salt Lake City -> Seattle -> Las Vegas -> San Francisco -> Reno 3287
+Reno -> Las Vegas -> San Francisco -> Salt Lake City -> Seattle -> Reno 4485
+Reno -> Las Vegas -> San Francisco -> Seattle -> Salt Lake City -> Reno 2813
+Reno -> Las Vegas -> Salt Lake City -> San Francisco -> Seattle -> Reno 3116
+Reno -> Las Vegas -> Salt Lake City -> Seattle -> San Francisco -> Reno 2734
+Reno -> Las Vegas -> Seattle -> San Francisco -> Salt Lake City -> Reno 3352
+Reno -> Las Vegas -> Seattle -> Salt Lake City -> San Francisco -> Reno 3614
+Reno -> Seattle -> San Francisco -> Salt Lake City -> Las Vegas -> Reno 2816
+Reno -> Seattle -> San Francisco -> Las Vegas -> Salt Lake City -> Reno 3019
+Reno -> Seattle -> Salt Lake City -> San Francisco -> Las Vegas -> Reno 2927
+Reno -> Seattle -> Salt Lake City -> Las Vegas -> San Francisco -> Reno 2391
+Reno -> Seattle -> Las Vegas -> San Francisco -> Salt Lake City -> Reno 3369
+Reno -> Seattle -> Las Vegas -> Salt Lake City -> San Francisco -> Reno 2930
+
+ * Denotes the path of the shortest distance, and the path selected by the program
