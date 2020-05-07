@@ -1,4 +1,5 @@
-#include "Graph.h"
+
+#include "graphFunctionality.h"
 #include <vector>
 // Function to visit (output) a node or vertex
 template <typename T>
