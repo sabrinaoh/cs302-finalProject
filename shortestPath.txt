@@ -24,3 +24,7 @@ Reno -> Seattle -> Las Vegas -> San Francisco -> Salt Lake City -> Reno 3369
 Reno -> Seattle -> Las Vegas -> Salt Lake City -> San Francisco -> Reno 2930
 
  * Denotes the path of the shortest distance, and the path selected by the program
+
+Path Lengths
+Start		End		Distance
+Reno		San Francisco	218Reno		Salt Lake City	518Reno		Las Vegas	443Reno		Seattle		704San Francisco	Reno		218San Francisco	Las Vegas	564San Francisco	Seattle		808San Francisco	Salt Lake City	436Salt Lake City	Reno		518Salt Lake City	San Francisco	736Salt Lake City	Las Vegas	425Salt Lake City	Seattle		840Las Vegas	Reno		443Las Vegas	San Francisco	564Las Vegas	Salt Lake City	425Las Vegas	Seattle		1147Seattle		Reno		704Seattle		Salt Lake City	480Seattle		Las Vegas	1147Seattle		San Francisco	808
